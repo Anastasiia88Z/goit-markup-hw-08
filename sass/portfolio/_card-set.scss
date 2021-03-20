@@ -22,12 +22,12 @@
   display: flex;
   justify-content: center;
 
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+
 }
 
-
-&:not(:last-child) {
-  margin-right: 8px;
-}
 
 .item-portfolio .button {
   padding: 6px 22px;
@@ -50,15 +50,15 @@
   flex-basis: calc(100% / 3 - var(--card-set-gap));
   margin-left: var(--card-set-gap);
   margin-top: var(--card-set-gap);
-}
 
-&:hover,
-&:focus {
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
-}
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+  }
 
-&:hover .hover-box {
-  transform: translateY(0);
+  &:hover .hover-box {
+    transform: translateY(0);
+  }
 }
 
 .site img {

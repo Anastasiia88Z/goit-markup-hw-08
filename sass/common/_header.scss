@@ -76,16 +76,18 @@
 
   transition: color 250ms var(--timing-function);
 
+  & li:not(:last-child) {
+    margin-right: 50px;
+  }
+
 }
 
-&:hover,
-&:focus & {
+
+.site-nav__link:hover, 
+.site-nav__link:focus {
   color: var(--blue-text);
 }
 
-& li:not(:last-child) {
-  margin-right: 50px;
-}
 
 .current::after {
   content: "";
@@ -124,11 +126,8 @@
 
   transition: color 250ms var(--timing-function);
 
-}
-
-&:hover,
-&:focus {
-  color: var(--blue-text);
+  &:hover,
+  &:focus {color: var(--blue-text);}
 
 }
 
@@ -137,3 +136,9 @@
   margin-right: 50px;
 }
 
+.auto-nav,
+.site-nav {
+  @media screen and (max-width: 767px) {
+    display: none;   
+  }
+}

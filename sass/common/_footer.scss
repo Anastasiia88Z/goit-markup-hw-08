@@ -69,12 +69,12 @@
   text-decoration: none;
 
   transition: color 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--blue-text);}
 }
 
-&:hover,
-&:focus {
-  color: var(--blue-text);
-}
 
 /* FOOTER 2 */
 
@@ -111,11 +111,10 @@
   margin-right: 10px;
 
   transition: background-color 250ms var(--timing-function);
-}
 
-&:focus,
-&:hover {
-  background-color: var(--blue-text);
+  &:focus,
+  &:hover {
+    background-color: var(--blue-text);}
 }
 
 .join-list__join-site {

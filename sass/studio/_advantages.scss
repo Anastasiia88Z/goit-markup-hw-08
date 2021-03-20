@@ -1,6 +1,13 @@
 .advantages {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.advantages {
   padding-top: 94px ;
   padding-bottom: 90px;
+  
 }
 
 .advantages-list__title {
@@ -44,10 +51,9 @@
 .advantages-list__item {
   width: 270px;
 
-}
-
-&:not(:last-child) {
-  margin-right: 30px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .advantages-list__text {

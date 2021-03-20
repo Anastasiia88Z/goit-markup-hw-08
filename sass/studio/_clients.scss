@@ -22,11 +22,12 @@
   padding: 0;
 
   display: flex;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
-&:not(:last-child) {
-  margin-right: 30px;
-}
 
 .clients-list__clients-link {
 
@@ -44,13 +45,13 @@
   background-color: var(--white-text);
 
   transition: color 250ms var(--timing-function);
+
+  &:hover,
+  &:focus { 
+    border: 1px solid var(--blue-text);
+    color: var(--blue-text);}
 }
 
-&:hover,
-&:focus { 
-  border: 1px solid var(--blue-text);
-  color: var(--blue-text);
-}
 
 .clients-list__clients-logo-1 {
   fill: currentColor;

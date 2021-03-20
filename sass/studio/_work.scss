@@ -31,10 +31,10 @@
 
 .work-list__work-images {
   position: relative;
-}
 
-&:not(:last-child) {
-  margin-right: 30px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .work-list__overlay {

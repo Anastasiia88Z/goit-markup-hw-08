@@ -51,11 +51,11 @@
   border-radius: 50%;
   width: 30px;
   height: 30px;
-}
 
-&:hover {
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  fill: var(--blue-text);
+  &:hover {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    fill: var(--blue-text);
+  }
 }
 
 /* стилизация форм модального окна*/
@@ -83,16 +83,14 @@
   border-radius: 4px;
   outline: none;
   
-}
+  &:focus {
+    border-color: var(--blue-text);
+  }
 
-&:focus {
-  border-color: var(--blue-text);
+  &:focus + .signup-form__icon-modal {
+    fill: var(--blue-text);
+  }
 }
-
-&:focus + .signup-form__icon-modal {
-  fill: var(--blue-text);
-}
-
 
 .signup-form .group-modal {
   display: flex;
