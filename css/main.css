@@ -825,11 +825,10 @@ ul {
   background-color: var(--background-white);
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1200px) {
   .team {
     padding-top: 60px;
     padding-bottom: 60px;
-    display: block;
   }
 }
 
@@ -846,7 +845,7 @@ ul {
   letter-spacing: 0.03em;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1200px) {
   .team__title-w {
     text-align: center;
     margin-bottom: 30px;
@@ -876,19 +875,14 @@ ul {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  padding-top: 30px;
-  padding-bottom: 10px;
-}
-
-@media screen and (min-width: 1200px) {
-  .team-list__title-t {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
+  margin-top: 30px;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .img {
@@ -917,6 +911,13 @@ ul {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .team-list {
+    padding: 0;
+    margin: 0;
+  }
+}
+
 .team-list__team-item {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -924,9 +925,21 @@ ul {
   background-color: var(--white-text);
 }
 
-@media screen and (min-width: 480px) {
-  .team-list__team-item:not(:last-child) {
-    margin-bottom: 30px;
+@media screen and (max-width: 767px) {
+  .team-list__team-item {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team-list__team-item {
+    width: calc((100% - 2 * 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-list__team-item {
+    width: 270px;
   }
 }
 
@@ -936,9 +949,26 @@ ul {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .team-list__team-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
 .team-list__title-t,
 .team-list__text-team {
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .social-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 16px 74px 24px;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 @media screen and (min-width: 480px) {
@@ -946,9 +976,9 @@ ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding-top: 16px;
-    padding-bottom: 24px;
-    padding-left: 122px;
+    padding: 16px 122px 24px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -991,7 +1021,7 @@ ul {
   fill: currentColor;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1200px) {
   .clients {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -1015,7 +1045,7 @@ ul {
   letter-spacing: 0.03em;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1200px) {
   .clients__title-w-t {
     font-size: 28px;
     line-height: 1.18;
@@ -1050,15 +1080,45 @@ ul {
   }
 }
 
-@media screen and (min-width: 480px) {
-  .clients-list__clients-items:not(:last-child) {
-    margin-right: 0;
+@media screen and (max-width: 767px) {
+  .clients-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .clients-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: -15px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .clients-list__clients-items:not(:last-child) {
     margin-right: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .clients-list__clients-items {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .clients-list__clients-items {
+    width: calc((100% - 3 * 30px) / 3);
+    margin: 15px;
   }
 }
 
