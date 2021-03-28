@@ -3,7 +3,7 @@
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
 }
 
 .site__site-text {
@@ -13,14 +13,27 @@
   letter-spacing: 0.03em;
 }
 
-.card-set {
-  
-  padding: 0;
-  margin-top: 0;
-  margin-bottom: 50px;
-  
+.card-set { 
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: 1200px) {
+    justify-content: center;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-bottom: 30px;
+    margin-top: 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 40px;
+    margin-top: 0;
+    padding: 0;
+  }
 
   &:not(:last-child) {
     margin-right: 8px;
@@ -36,41 +49,38 @@
 }
 
 .site {
-  @media screen and (min-width: 768px) {
-    // padding: 0; 
-    // margin: 0; 
 
+  @media screen and (max-width: 767px) {
+    // margin-bottom: 30px;
+    padding: 0;
+    margin: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    // margin-bottom: 60px;
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
 
     margin-left: calc( -1 * var(--card-set-gap));
     margin-top: calc( -1 * var(--card-set-gap));
   }
-
-  @media screen and (max-width: 767px) {
-    margin-bottom: 30px;
-  }
-
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    margin-bottom: 60px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    margin-bottom: 94px;
-  }
 }
+  
 
 .site__site-card {
   border: 1px solid #EEEEEE;
   transition: background-color 250ms var(--timing-function);
 
-  @media screen and (max-width: 767px) {
+  @media screen and (min-width: 480px) and (max-width: 767px) {
     .site__site-card:not(:last-child) {
       margin-bottom: 30px;
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px){
+    display: flex;
     flex-basis: calc(100% / 2 - var(--card-set-gap));
     margin-left: var(--card-set-gap);
     margin-top: var(--card-set-gap);
@@ -78,6 +88,8 @@
 
   @media screen and (min-width: 1200px) {
     flex-basis: calc(100% / 3 - var(--card-set-gap));
+    margin-left: var(--card-set-gap);
+    margin-top: var(--card-set-gap);
   }
 }
   
@@ -105,7 +117,7 @@
 }
 
 .card-thumb { 
-  height: 294px;
+  // height: 294px;
   margin: 0;
 
   position: relative;
