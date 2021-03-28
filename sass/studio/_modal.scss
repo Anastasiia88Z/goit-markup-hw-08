@@ -28,15 +28,25 @@
   transform: translate(-50%, -50%) scale(1);
   transition: background-color 250ms var(--timing-function);
 
-  width: 528px;
-  height: 581px;
+  
   background-color: var(--white-text);
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
   padding: 40px;
-}
+
+  @media screen and (max-width: 1199px) {
+    width: 450px;
+    height: 609px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+
+  }
+}  
 
 .modal-close {
   position: absolute;
@@ -70,6 +80,10 @@
 
   margin-top: 0px;
   margin-bottom: 12px;
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 
@@ -172,16 +186,26 @@
 
   font-family: Roboto, sans-serif;
   font-style: normal;
-  font-weight: 400; 
-  font-size: 14px;
-  line-height: 1.71;
   margin-top: 20px;
   margin-bottom: 30px;
   color: var(--grey-text);
 
   text-align: center;
 
-  margin-left: 14px; 
+  @media screen and (max-width: 1199px) {
+    margin-left: 0;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-align: left;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-weight: 400; 
+    font-size: 14px;
+    line-height: 1.71;
+    margin-left: 14px; 
+  }
 } 
 
 .signup-form__checkbox:checked +.signup-form__span {
@@ -227,5 +251,9 @@
   height: 50px;
 
   margin-left: 125px;
+
+  @media screen and (max-width: 1199px) {
+    margin-left: 100px;
+  }
 
 }
